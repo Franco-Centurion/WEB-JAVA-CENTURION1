@@ -7,7 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-
+//corregir
 public class ClienteDAO {
     Conexion cn = new Conexion();
     Connection con;
