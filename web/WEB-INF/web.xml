@@ -12,6 +12,10 @@
         <servlet-name>controlador</servlet-name>
         <servlet-class>Controlador.controlador</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ControladorValidar</servlet-name>
+        <servlet-class>Controlador.ControladorValidar</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Controlador</servlet-name>
         <url-pattern>/Controlador</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>controlador</servlet-name>
         <url-pattern>/controlador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorValidar</servlet-name>
+        <url-pattern>/ControladorValidar</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

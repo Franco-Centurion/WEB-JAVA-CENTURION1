@@ -10,7 +10,7 @@
         <div class="container mt-4 col-lg-4">
             <div class="card col-sm-10">
                 <div class="card-body">
-                    <form class="form-sign" action="Validar" method="POST">
+                    <form class="form-sign" action="ControladorValidar" method="POST">
                         <div class="form-group text-center">
                             <h3>Login</h3>
                             <img src="https://article.images.consumerreports.org/f_auto/prod/content/dam/CRO%20Images%202018/Health/September/CR-Health-Inlinehero-meds-effect-mood-0918" alt="70" width="170"/>
