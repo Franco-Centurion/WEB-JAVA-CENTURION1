@@ -22,12 +22,12 @@ public class ControladorValidar extends HttpServlet {
             em = edao.validar(user, pass);
             if (em.getNombre() != null) {
                 request.setAttribute("usuario", em);
-                request.getRequestDispatcher("Controlador?menu=Principal").forward(request, response);
+                request.getRequestDispatcher("PantallaPrincipal.jsp").forward(request, response);
             } else {
                 request.getRequestDispatcher("index.jsp").forward(request, response);
             }
         } else {
-            request.getRequestDispatcher("index.jsp").forward(request, response);
+            request.getRequestDispatcher("PantallaPrincipal.jsp").forward(request, response);
         }
 
     }

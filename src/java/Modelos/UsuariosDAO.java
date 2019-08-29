@@ -20,7 +20,7 @@ public class UsuariosDAO {
     ResultSet rs;
 
     public Usuarios validar(String nombreUsuario, String PassUsuario) {
-        String sql = "select * from  usuarios where nombre='" + nombreUsuario + "' and pass=" + PassUsuario + "'";
+        String sql = "select * from  usuarios where nombre='" + nombreUsuario + "' and contraseña='" + PassUsuario + "'";
         Usuarios Usuarios = new Usuarios();
         try {
             con = cn.Conexion();
