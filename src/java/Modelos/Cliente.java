@@ -14,16 +14,16 @@ public class Cliente {
     String nombre;
     String dni;
     String direccion;
-    String fecha_alta;
+    String fecha_Compra;
     
     public Cliente() {
     }
 
-    public Cliente(int id, String nombre, String dni, String direccion, String fecha_alta) {
+    public Cliente(int id, String nombre, String dni, String direccion, String fecha_Compra) {
         this.id = id;
         this.nombre = nombre;
         this.direccion = direccion;
-        this.fecha_alta = fecha_alta;
+        this.fecha_Compra = fecha_Compra;
     }
 
     public int getId() {
@@ -51,13 +51,13 @@ public class Cliente {
         this.direccion = direccion;
     }
 
-    public String getFecha_alta() {
-        return fecha_alta;
+    public String getFecha_Compra() {
+        return fecha_Compra;
     }
 
-    public void setFecha_alta(String fecha_alta) {
-        this.fecha_alta = fecha_alta;
+    public void setFecha_Compra(String fecha_Compra) {
+        this.fecha_Compra = fecha_Compra;
     }
-    
+
 }
  

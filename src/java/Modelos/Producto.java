@@ -3,8 +3,8 @@ package Modelos;
 
 public class Producto {
     int id;
-    String nombre;
-    int fecha_vencimiento;
+    String nom;
+    String fecha_vencimiento;
     double precio;
     int stock;
     String laboratorio;
@@ -14,12 +14,12 @@ public class Producto {
     
     }
 
-    public Producto(int id, String nombre, int fecha_vencimiento, double precio, int stock, String laboratorio, String tmedicamento) {
+    public Producto(int id, String nombre, String fecha_vencimiento, double precio, int stock, String laboratorio, String tmedicamento) {
         this.id = id;
-        this.nombre = nombre;
-        this.fecha_vencimiento = fecha_vencimiento;
+        this.nom = nombre;
         this.precio = precio;
         this.stock = stock;
+        this.fecha_vencimiento = fecha_vencimiento;
         this.laboratorio = laboratorio;
         this.tmedicamento = tmedicamento;
     }
@@ -32,19 +32,19 @@ public class Producto {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNom() {
+        return nom;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNom(String nombre) {
+        this.nom = nombre;
     }
 
-    public int getFecha_vencimiento() {
+    public String getFecha_vencimiento() {
         return fecha_vencimiento;
     }
 
-    public void setFecha_vencimiento(int fecha_vencimiento) {
+    public void setFecha_vencimiento(String fecha_vencimiento) {
         this.fecha_vencimiento = fecha_vencimiento;
     }
 
@@ -78,7 +78,9 @@ public class Producto {
 
     public void setTmedicamento(String tmedicamento) {
         this.tmedicamento = tmedicamento;
+    }    
+
+    String getFecha_Vencimiento() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    
 }
