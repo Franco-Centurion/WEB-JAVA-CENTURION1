@@ -11,7 +11,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a style="margin-left: 10px; border: none" class="btn btn-outline-light"  href="#">Laboratorio</a>
+                        <a style="margin-left: 10px; border: none" class="btn btn-outline-light"  href="#">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a style="margin-left: 10px; border: none" class="btn btn-outline-light" href="Controlador?menu=Producto&accion=Listar" target="myFrame">Medicamentos</a>

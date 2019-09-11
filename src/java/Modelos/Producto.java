@@ -79,8 +79,4 @@ public class Producto {
     public void setTmedicamento(String tmedicamento) {
         this.tmedicamento = tmedicamento;
     }    
-
-    String getFecha_Vencimiento() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }

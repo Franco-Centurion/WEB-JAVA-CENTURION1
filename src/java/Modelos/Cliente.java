@@ -11,21 +11,22 @@ package Modelos;
  */
 public class Cliente {
     int id;
-    String nombre;
+    String nom;
     String dni;
-    String direccion;
-    String fecha_Compra;
+    String dir;
+    String fecha_compra;
     
     public Cliente() {
     }
 
-    public Cliente(int id, String nombre, String dni, String direccion, String fecha_Compra) {
+    public Cliente(int id, String nombre, String dni, String direccion, String fecha_compra) {
         this.id = id;
-        this.nombre = nombre;
-        this.direccion = direccion;
-        this.fecha_Compra = fecha_Compra;
+        this.nom = nombre;
+        this.dir = direccion;
+        this.fecha_compra = fecha_compra;
+        this.dni= dni;
     }
-
+   
     public int getId() {
         return id;
     }
@@ -34,29 +35,37 @@ public class Cliente {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNom() {
+        return nom;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNom(String nombre) {
+        this.nom = nombre;
     }
 
 
-    public String getDireccion() {
-        return direccion;
+    public String getDir() {
+        return dir;
     }
 
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
+    public void setDir(String direccion) {
+        this.dir = direccion;
     }
 
-    public String getFecha_Compra() {
-        return fecha_Compra;
+    public String getFecha_compra() {
+        return fecha_compra;
     }
 
-    public void setFecha_Compra(String fecha_Compra) {
-        this.fecha_Compra = fecha_Compra;
+    public void setFecha_compra(String fecha_compra) {
+        this.fecha_compra = fecha_compra;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
     }
 
 }

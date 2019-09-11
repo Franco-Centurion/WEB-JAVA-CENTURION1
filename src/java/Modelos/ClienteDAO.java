@@ -25,8 +25,8 @@ public class ClienteDAO {
             while (rs.next()) {
                 c.setId(rs.getInt(1));
                 
-                c.setNombre(rs.getString(3));
-                c.setDireccion(rs.getString(4));                
+                c.setNom(rs.getString(3));
+                c.setDir(rs.getString(4));                
                           
             }
         } catch (Exception e) {
@@ -45,10 +45,10 @@ public class ClienteDAO {
             while (rs.next()) {
                 Cliente cl=new Cliente();
                 cl.setId(rs.getInt(1));
-                 cl.setNombre(rs.getString(3));
-                cl.setNombre(rs.getString(3));
-                cl.setDireccion(rs.getString(4));
-                             
+                cl.setNom(rs.getString(2));
+                cl.setDir(rs.getString(3));
+                cl.setFecha_compra(rs.getString(4));
+                cl.setDni(rs.getString(5));                           
                 lista.add(cl);
             }
         } catch (Exception e) {
@@ -56,14 +56,14 @@ public class ClienteDAO {
         return lista;
     }
     public int agregar(Cliente cl){ 
-        String sql="insert into cliente(Dni, Nombres, Direccion,Estado)values(?,?,?,?)";
+        String sql="insert into cliente(nombre, direccion,fecha_Compra,DNI)values(?,?,?,?)";
         try {
             con=cn.Conexion();
             ps=con.prepareStatement(sql);
-          
-            ps.setString(2, cl.getNombre());
-            ps.setString(3, cl.getDireccion());
-                      
+            ps.setString(1, cl.getNom());
+            ps.setString(2, cl.getDir());
+            ps.setString(3, cl.getFecha_compra());
+            ps.setString(4, cl.getDni());       
             ps.executeUpdate();
         } catch (Exception e) {
         }
@@ -72,30 +72,31 @@ public class ClienteDAO {
     }
     public Cliente listarId(int id){
         Cliente cli=new Cliente();
-        String sql="select * from cliente where IdCliente="+id;
+        String sql="select * from cliente where cliente="+id;
         try {
             con=cn.Conexion();
             ps=con.prepareStatement(sql);
             rs=ps.executeQuery();
             while (rs.next()) {
-               
-                cli.setNombre(rs.getString(3));
-                cli.setDireccion(rs.getString(4));
-                              
+                cli.setNom(rs.getString(2));
+                cli.setDir(rs.getString(3));  
+                cli.setFecha_compra(rs.getString(4));
+                cli.setDni(rs.getString(5));
             }
         } catch (Exception e) {
         }
         return cli;
     }
     public int actualizar(Cliente em){
-        String sql="update cliente set Dni=?, Nombres=?, Direccion=?,Estado=? where IdCliente=?";
+        String sql="update cliente set nombre=?, direccion=?,fecha_Compra=?,DNI=? where id=?";
         try {
             con=cn.Conexion();
             ps=con.prepareStatement(sql);
-         
-            ps.setString(2, em.getNombre());
-            ps.setString(3, em.getDireccion());
-                      
+           
+            ps.setString(1, em.getNom());
+            ps.setString(2, em.getDir());
+            ps.setString(3, em.getFecha_compra());
+            ps.setString(4, em.getDni());
             ps.setInt(5, em.getId());
             ps.executeUpdate();
         } catch (Exception e) {
@@ -103,7 +104,7 @@ public class ClienteDAO {
         return r;
     }
     public void delete(int id){
-        String sql="delete from cliente where IdCliente="+id;
+        String sql="delete from cliente where id="+id;
         try {
             con=cn.Conexion();
             ps=con.prepareStatement(sql);
